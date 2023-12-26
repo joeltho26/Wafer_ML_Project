@@ -1,0 +1,28 @@
+base:
+  project: Wafer-Quality-Project
+  random_state: 42
+  target_col: Output
+
+data_source:
+  batch_files: Training_Batch_Files
+
+data_preparation:
+  training_db: Training.db
+  training_db_dir: Training_Database
+  schema_training: config/schema_training.json
+  good_validation_raw_dir: data/Training_Raw_files_validated/Good_raw
+  bad_validation_raw_dir: data/Training_Raw_files_validated/Bad_raw
+  TrainingArchiveBadData: data/TrainingArchiveBadData
+  Training_FileFromDB: data/Training_FileFromDB
+  master_csv: master.csv
+
+pred_data_preparation:
+  prediction_db: Prediction.db
+  prediction_db_dir: Prediction_Database
+  schema_prediction: config/schema_prediction.json
+  good_validation_raw_dir: data/Prediction_Raw_files_validated/Good_raw
+  bad_validation_raw_dir: data/Prediction_Raw_files_validated/Bad_raw
+  PredictionArchiveBadData: data/PredictionArchiveBadData
+  Prediction_FileFromDB: data/Prediction_FileFromDB
+  master_csv: master.csv
+  Prediction_Output_File: Prediction_Output_File/Predictions.csv
